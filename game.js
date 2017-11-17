@@ -13,7 +13,8 @@ KEY_CODES = {
   71: 'g',
   72: 'h',
   77: 'm',
-  80: 'p'
+  80: 'p',
+  87: 'w'
 }
 
 KEY_STATUS = { keyDown:false };
@@ -392,7 +393,7 @@ Ship = function () {
       this.vel.rot = 0;
     }
 
-    if (KEY_STATUS.up) {
+    if (KEY_STATUS.w) {
       var rad = ((this.rot-90) * Math.PI)/180;
       this.acc.x = 0.5 * Math.cos(rad);
       this.acc.y = 0.5 * Math.sin(rad);
